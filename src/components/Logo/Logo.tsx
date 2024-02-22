@@ -53,9 +53,9 @@ const Logo: FunctionComponent<Props> = ({ href, noText, size = 'medium', variant
     () =>
       // TODO: Add real text here
       noText ? null : (
-        <div className={`${styles.text} ${styles[size]}`}>
-          <span className={styles.primary}>Logo</span>
-          Type
+        <div className={styles.textWrap}>
+          <span className={`${styles.text} ${styles[size]}`}>Как Делать Продукты</span>
+          <span>9 вопросов самому себе</span>
         </div>
       ),
     [noText, size]
@@ -64,11 +64,11 @@ const Logo: FunctionComponent<Props> = ({ href, noText, size = 'medium', variant
   const contentToRender = useMemo(
     () => (
       <div className={styles.container}>
-        {imageToRender}
+        {/* {imageToRender} */}
         {textToRender}
       </div>
     ),
-    [imageToRender, textToRender]
+    [textToRender]
   );
 
   const currentClassName = [styles.logo, styles[size]].filter(Boolean).join(' ');

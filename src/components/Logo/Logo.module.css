@@ -1,7 +1,7 @@
 .logo {
   /* Same as .dark */
-  color: var(--color-text);
-  margin: 0.125rem;
+  color: var(--color-primary);
+  margin: 1rem;
   text-decoration: none;
 }
 
@@ -26,10 +26,16 @@
     all 1s;
 }
 
+.textWrap{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .text {
-  transition:
+  /* transition:
     color 0.3s,
-    all 1s;
+    all 1s; */
   white-space: nowrap;
 }
 

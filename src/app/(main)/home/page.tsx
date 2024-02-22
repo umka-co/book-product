@@ -69,12 +69,12 @@ const HomePage = () => {
         ))}
       </Stack>
 
-      <Typo variant="header2">Picture</Typo>
+      {/* <Typo variant="header2">Picture</Typo>
       <Stack alignItems="center" padding="1rem 0">
         <Picture variant="first" width={600} height={315} />
         <Picture src="/img/favicon/256x256.png" width={256} height={256} />
         <Picture variant="second" />
-      </Stack>
+      </Stack> */}
 
       <Typo variant="paragraph">{'Another paragraph of text. '.repeat(10)}</Typo>
 

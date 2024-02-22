@@ -11,9 +11,10 @@
 
   --color-text: #222222;
   --color-background: #ffffff;
-  --color-headerAndFooter: #fff5ed;
+  --color-headerAndFooter: #272727;
+  --color-headerAndFooterText: #f0f0f0;
 
-  --color-primary: #bf2a1d;
+  --color-primary: #f37208;
   --color-secondary: #404040;
   --color-success: #008000;
   --color-warning: #bbbb00;

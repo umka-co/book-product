@@ -28,14 +28,13 @@ function getTagByVariant(variant: TypoVariant): keyof JSX.IntrinsicElements {
 }
 
 function getFontByVariant(variant: TypoVariant): string {
-  // TODO: If we will use single font, we can remove this function
   switch (variant) {
     case 'header1':
     case 'header2':
     case 'header3':
-      return FONTS.poppins.className;
+      return FONTS.montserrat.className;
     default:
-      return FONTS.inter.className;
+      return FONTS.merriweather.className;
   }
 }
 

@@ -1,25 +1,25 @@
-import { Inter, Poppins } from 'next/font/google';
+import { Merriweather, Montserrat } from 'next/font/google';
 
 // Font 1
-const fontPoppins = Poppins({
+const fontMontserrat = Montserrat({
   weight: ['600', '700'],
-  subsets: ['latin'],
-  variable: '--font-poppins', // This set a CSS variable for the font, so we don't need to set it manually in the Main layout
+  subsets: ['cyrillic', 'latin'],
+  variable: '--font-montserrat', // This set a CSS variable for the font, so we don't need to set it manually in the Main layout
   display: 'swap',
 });
 
 // Font 2
-const fontInter = Inter({
+const fontMerriweather = Merriweather({
   weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-inter', // This set a CSS variable for the font, so we don't need to set it manually in the Main layout
+  subsets: ['cyrillic', 'latin'],
+  variable: '--font-merriweather', // This set a CSS variable for the font, so we don't need to set it manually in the Main layout
   display: 'swap',
 });
 
 export const FONTS = {
-  default: fontPoppins, // The default font is used for <body/>, so it should be set here
-  poppins: fontPoppins,
-  inter: fontInter,
+  default: fontMontserrat, // The default font is used for <body/>, so it should be set here
+  montserrat: fontMontserrat,
+  merriweather: fontMerriweather,
 };
 
 export default FONTS;

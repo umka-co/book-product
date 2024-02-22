@@ -1,5 +1,8 @@
 .wrapper {
+  align-items: center;
+  background-color: var(--color-headerAndFooter);
   position: sticky;
+
   top: 0;
   width: 100%;
   z-index: 64;
@@ -7,7 +10,6 @@
 
 .header {
   align-items: center;
-  background-color: var(--color-headerAndFooter);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   display: flex;
@@ -27,13 +29,14 @@
 }
 
 .header.desktop {
-  max-width: 1200px;
-  transition: 1s height;
+  align-self: stretch;
+  /* max-width: 1200px; */
+  transition: 0.3s height;
 }
 
 .header.desktop.big {
   /* Full-size Header on Desktop */
-  height: 12rem; /* 192px; */
+  height: 10rem; /* 160px; */
 }
 
 .header.desktop.small {

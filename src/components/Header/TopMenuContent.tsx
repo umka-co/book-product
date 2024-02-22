@@ -18,18 +18,18 @@ const TopMenuContent: FunctionComponent<Props> = ({ activeClassName, marginForBu
   return (
     <ul role="menu">
       <li role="menuitem">
-        <Button activeClassName={activeClassName} href="/" margin={marginForButton} variant="text">
-          Home
+        <Button activeClassName={activeClassName} href="/book/" margin={marginForButton} variant="text">
+          Книга
         </Button>
       </li>
       <li role="menuitem">
-        <Button activeClassName={activeClassName} href="/download/" margin={marginForButton} variant="text">
-          Download
+        <Button activeClassName={activeClassName} href="/table-of-contents/" margin={marginForButton} variant="text">
+          Оглавление
         </Button>
       </li>
       <li role="menuitem">
-        <Button activeClassName={activeClassName} href="/contact/" margin={marginForButton} variant="text">
-          Contact
+        <Button activeClassName={activeClassName} href="/about-book/" margin={marginForButton} variant="text">
+          История
         </Button>
       </li>
     </ul>
