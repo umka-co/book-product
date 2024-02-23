@@ -28,7 +28,7 @@ const TopMenuContent: FunctionComponent<Props> = ({ activeClassName, marginForBu
         </Button>
       </li>
       <li role="menuitem">
-        <Button activeClassName={activeClassName} href="/about-book/" margin={marginForButton} variant="text">
+        <Button activeClassName={activeClassName} href="/how-everything-began/" margin={marginForButton} variant="text">
           История
         </Button>
       </li>

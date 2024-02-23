@@ -1,3 +1,3 @@
 import NavBar from "./NavBar";
 
-export {NavBar as default, NavBar}
+export default NavBar

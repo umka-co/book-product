@@ -1,4 +1,4 @@
-import { FunctionComponent, PropsWithChildren } from 'react';
+import { FunctionComponent, PropsWithChildren, useMemo } from 'react';
 import type { Metadata, Viewport } from 'next';
 import { APP_NAME, PUBLIC_URL } from '@/config';
 import { OPEN_GRAPH_DEFAULT } from '@/app/config';
@@ -10,7 +10,8 @@ import Footer from '@/components/Footer';
 import MobileOrDesktop from '@/components/MobileOrDesktop';
 import StylesInjector from '@/components/StylesInjector';
 import './main.css';
-import { NavBar, Stack } from '@/components';
+import { LayoutContent, NavBar, Stack } from '@/components';
+import { useIsMobile } from '@/hooks';
 
 export const metadata: Metadata = {
   metadataBase: new URL(PUBLIC_URL),
@@ -32,6 +33,7 @@ export const viewport: Viewport = {
  * @layout Main
  */
 const MainLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
+  
   return (
     <>
       <head>
@@ -42,10 +44,7 @@ const MainLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
 
       <body className={FONTS.default.className}>
         <Header />
-        <Stack direction="row" gap='5rem'>
-          <div className="content">{children}</div>
-          <NavBar />
-        </Stack>
+      <LayoutContent>{children}</LayoutContent>
         <Footer />
 
         <MobileOrDesktop />

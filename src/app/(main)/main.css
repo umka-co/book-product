@@ -30,19 +30,11 @@ a {
   text-decoration: none;
 }
 
-hr{
+hr {
   border: 2px solid black;
 }
 
-.content{
-  margin: 3rem 0 3rem 1rem;
-  max-width: 60%;
-}
 
-.content a{
-  color: var(--color-secondary);
-}
-
-#button{
+#button {
   color: var(--color-whiteText);
 }

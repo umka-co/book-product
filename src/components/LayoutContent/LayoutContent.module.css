@@ -1,0 +1,21 @@
+.wrapper {
+  /* display: flex; */
+
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.desktop {
+  margin: 3rem 0 3rem 1rem;
+  max-width: 60%;
+}
+
+.mobile {
+  margin: 1rem;
+  width: 100%;
+}
+
+.content a {
+  color: var(--color-secondary);
+}

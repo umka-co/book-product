@@ -25,12 +25,13 @@
   position: relative;
   transition: 0.5s height;
   /* Move it over Mobile Menu */
+ 
   z-index: 63;
 }
 
 .header.desktop {
   align-self: stretch;
-  /* max-width: 1200px; */
+
   transition: 0.3s height;
 }
 

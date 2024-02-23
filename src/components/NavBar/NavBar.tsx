@@ -1,10 +1,17 @@
-import { FunctionComponent } from 'react';
-import { Button, Stack, Typo } from '..';
+import { FunctionComponent, useMemo } from 'react';
+import { useIsMobile } from '@/hooks';
+import Stack from '../Stack';
+import Typo from '../Typo';
+import Button from '../Button';
+import TableOfContent from '../TableOfContent/TableOfContent';
 import styles from './NavBar.module.css';
 
 const NavBar: FunctionComponent = () => {
+  const isMobile = useIsMobile()
+  const className = useMemo(()=>[styles.wrapper, isMobile ? styles.mobile : styles.desktop].filter(Boolean).join(' '),
+  [isMobile])
   return (
-    <Stack className={styles.wrapper}>
+    <Stack className={className}>
       <hr />
       <Typo tag="h4" variant="header3">
         СКАЗАТЬ СПАСИБО АВТОРУ
@@ -19,33 +26,7 @@ const NavBar: FunctionComponent = () => {
       <Typo tag="h4" variant="header3">
         ГЛАВЫ
       </Typo>
-      <Typo variant="list">
-        <li>
-          <a>С чего начать?</a>
-        </li>
-        <li> <a>А нужно ли создавать новый продукт?</a></li>
-        <li>
-          <a>Что за формула «1-{'>'}10-{'>'}100» ?</a>
-        </li>
-        <li>
-          <a>У нас товар, продукт или сервис?</a>
-        </li>
-        <li>
-          <a>Сначала создать или сначала продать?</a>
-        </li>
-        <li>
-          <a>Что такое «минимальный набор в коробке»?</a>
-        </li>
-        <li>
-          <a>Почему упаковка и доставка важнее содержимого?</a>
-        </li>
-        <li>
-          <a>Как это «делать с конца»?</a>
-        </li>
-        <li>
-          <a>Что же дальше?</a>
-        </li>
-      </Typo>
+     <TableOfContent/>
       <hr />
       <Typo tag="h4" variant="header3">
         РУБРИКИ

@@ -1,11 +1,19 @@
 .wrapper {
-  margin: 3rem 1rem 3rem 0;
-  max-width: 30%;
+ 
   /* position: sticky;
   top: 96px;
   z-index: 60; */
 }
 
+.desktop{
+  margin: 3rem 1rem 3rem 0;
+  max-width: 30%;
+}
 .wrapper li {
   color: var(--color-secondary);
+}
+
+.mobile{
+  margin: 1rem;
+  width: 90%;
 }

@@ -29,9 +29,9 @@ const Footer = () => {
       
         <div className={styles.content}>
           <div className={styles.menu}>
-            <Link href="/">Home</Link>
-            <Link href="/download/">Download</Link>
-            <Link href="/contact/">Contacts</Link>
+            <Link href="/">Главная</Link>
+            <Link href="/table-of-contents/">Оглавление</Link>
+            <Link href="/how-everything-began/">История</Link>
           </div>
           <div className={styles.menu}>
             <Link href="/legal/privacy-policy/">Privacy Policy</Link>
