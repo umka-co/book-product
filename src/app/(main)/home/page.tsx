@@ -1,9 +1,7 @@
-import { APP_NAME, PUBLIC_URL } from '@/config';
-import { Button, Icon, SocialMedia, Stack, Typo, Wrapper } from '@/components';
+import { APP_NAME, APP_SHORT_NAME, PUBLIC_URL } from '@/config';
+import { Button, Icon, Link, SocialMedia, Stack, Typo, Wrapper } from '@/components';
 import { ICONS, IconName } from '@/components/Icon';
 import DownloadButton from '@/components/DownloadButton';
-import Video from '@/components/Video';
-import Picture from '@/components/Picture';
 
 /**
  * Home page content
@@ -12,79 +10,41 @@ import Picture from '@/components/Picture';
 const HomePage = () => {
   return (
     <Wrapper tag="article">
-      <Typo variant="header1">{APP_NAME}</Typo>
-      <Typo variant="paragraph">
-        <strong>{APP_NAME}</strong> {'Paragraph of text. '.repeat(10)}
-      </Typo>
-      <Typo variant="header3">Header 2 Style</Typo>
-      <Typo variant="list">
-        <li>
-          List style - <strong>Item 1</strong>
-        </li>
-        <li>
-          List style - <strong>Item 2</strong>
-        </li>
-        <li>
-          List style - <strong>Item 3</strong>
-        </li>
-      </Typo>
-      <Typo variant="header3">Header 3 Style</Typo>
-      <Typo variant="paragraph">{'Paragraph of text again. '.repeat(10)}</Typo>
-
-      <Typo variant="header1">Button</Typo>
-      <Stack alignItems="center">
-        <Stack direction="row">
-          <Button variant="contained">Variant Contained</Button>
-          <Button disabled variant="contained">
-            Contained Disabled
-          </Button>
+      <Stack gap="2rem">
+        <Typo variant="header1">{APP_SHORT_NAME}</Typo>
+        <Typo tag="p" variant="paragraph">
+          Книгой назвать это вряд ли можно, скорее брошюра или методичка. Всего девять страничек.
+        </Typo>
+        <Typo tag="p" variant="paragraph">
+          Рабочее название менялось несколько раз, от разных вариаций «Как сделать успешный IT продукт» до всяких
+          хлестких призывов типа «Сначала продай». Пока остановились на варианте: «Как Делать Продукты? 9 вопросов
+          самому себе».
+        </Typo>
+        <Typo tag="p" variant="paragraph">
+          Версия на русском языке (так же есть{' '}
+          <Link href="https://book-product.karpolan.com/">книга на английском</Link>) полностью доступна онлайн. Все
+          равно в русскоязычном сегменте никто не платит… Но если сильно хочется, можете «задонатить» мне на пиво 🙂
+          Спасибо!
+        </Typo>
+        <Stack direction='row' margin='2rem 0'>
+          <Button id='button' href='https://www.paypal.com/donate?token=SMui3DovutKgBc_bk2FFUKEU1S5c68ZF7WzwbN6-zvsiHPS5zoZnqksPn2zJoSm4A4nH6mfaPINQqF6U'>Donate on PayPal</Button>
+          <Button id='button' href='https://www.patreon.com/join/karpolan?redirect_uri=https%3A%2F%2Fbook-product-ru.karpolan.com%2F&utm_medium=widget'>Become a Patreon member</Button>
         </Stack>
-        <Stack direction="row">
-          <Button variant="outlined">Variant Outlined</Button>
-          <Button disabled variant="outlined">
-            Outlined Disabled
-          </Button>
-        </Stack>
-        <Stack direction="row">
-          <Button variant="text">Variant Text</Button>
-          <Button disabled variant="text">
-            Text Disabled
-          </Button>
-        </Stack>
-        <Stack direction="row" alignItems="center">
-          <Typo>Variant Icon:</Typo>
-          <Button variant="icon" icon="menu" />
-          <Button variant="icon" icon="close" />
-          {/* <Button variant="icon" icon="SOME_INVALID_NAME" /> */}
-          <Button disabled variant="icon" icon="close" />
-        </Stack>
-
-        <DownloadButton>Download Button</DownloadButton>
+        <Typo>
+          Начинайте <Link href='/table-of-contents/'>с оглавления книги</Link> или сразу переходите к чтению с <Link href='/where-to-begin/'>первой главы</Link>, внизу будут ссылки на следующие
+          главы.
+        </Typo>
+        <Typo>
+          Приветствуются комментарии «по делу», особенно с примерами и разъяснениями, которые можно добавить в книгу
+          потому что «для книги текста мало», «надо больше примеров», «не все понимают с первого раза» и т.д.
+        </Typo>
+        <Typo>
+          Если вам интересно как и почему появился этот набор заметок где «мало букв», но все «кратко и по делу», вот <Link href='/about-book/'>
+          краткая история появления этой «книги»
+          </Link>
+          .
+        </Typo>
       </Stack>
-
-      <Typo variant="header1">Icon</Typo>
-      <Stack direction="row" alignItems="center">
-        {Object.keys(ICONS).map((icon) => (
-          <Icon key={icon} icon={icon as IconName} size="2rem" />
-        ))}
-      </Stack>
-
-      {/* <Typo variant="header2">Picture</Typo>
-      <Stack alignItems="center" padding="1rem 0">
-        <Picture variant="first" width={600} height={315} />
-        <Picture src="/img/favicon/256x256.png" width={256} height={256} />
-        <Picture variant="second" />
-      </Stack> */}
-
-      <Typo variant="paragraph">{'Another paragraph of text. '.repeat(10)}</Typo>
-
-      <Typo variant="header1">Video</Typo>
-      <Stack alignItems="center" padding="1rem 0">
-        <Video video="demo" />
-      </Stack>
-
-      <Typo variant="header1">Social Media</Typo>
-      <SocialMedia variant="full" />
     </Wrapper>
   );
 };
@@ -93,7 +53,7 @@ const HomePage = () => {
  * MetaData for the page
  */
 export const metadata = {
-  title: `TODO: Something cool here - ${APP_NAME}`,
+  title: `Читать ${APP_NAME}`,
   alternates: {
     canonical: PUBLIC_URL,
   },

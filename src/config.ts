@@ -7,8 +7,8 @@ export const IS_PRODUCTION = getCurrentEnvironment() === 'production'; // Enable
 
 export const PUBLIC_URL = envRequired(process.env.NEXT_PUBLIC_PUBLIC_URL);
 
-export const APP_NAME = 'TODO: Add Name';
-export const APP_SHORT_NAME = 'TODO: Add Short Name';
+export const APP_NAME = 'Как Делать Продукты - Книга';
+export const APP_SHORT_NAME = 'Книга';
 
 
 export const OWNER = 'Anton Karpenko'

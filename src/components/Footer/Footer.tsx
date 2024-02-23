@@ -3,7 +3,6 @@ import { useMemo } from 'react';
 import { APP_NAME, OWNER } from '@/config';
 import { useIsMobile } from '@/hooks';
 import Link from '../Link';
-import Logo from '../Logo';
 import SocialMedia from '../SocialMedia';
 import styles from './Footer.module.css';
 

@@ -10,6 +10,7 @@ import Footer from '@/components/Footer';
 import MobileOrDesktop from '@/components/MobileOrDesktop';
 import StylesInjector from '@/components/StylesInjector';
 import './main.css';
+import { NavBar, Stack } from '@/components';
 
 export const metadata: Metadata = {
   metadataBase: new URL(PUBLIC_URL),
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#FFFFFF', 
+  themeColor: '#FFFFFF',
 };
 
 /**
@@ -41,12 +42,13 @@ const MainLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
 
       <body className={FONTS.default.className}>
         <Header />
-        <div className="content">{children}</div>
+        <Stack direction="row" gap='5rem'>
+          <div className="content">{children}</div>
+          <NavBar />
+        </Stack>
         <Footer />
 
-        <MobileOrDesktop
-        // TODO: Remove this injector if you don't use .isMobile and .isDesktop classes in your CSS styles
-        />
+        <MobileOrDesktop />
       </body>
     </>
   );
