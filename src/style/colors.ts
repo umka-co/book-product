@@ -2,7 +2,6 @@
  * Theme colors for the website, applied in CSS as `var(--color-nameOfColorsObjectProperty)`
  */
 export const COLORS = {
-  // TODO: Put your theme/style color here
   text: '#222222', // Text color
   background: '#FFFFFF', // Background color and contrast color for icons
   headerAndFooter: '#272727', // Background color for header and footer

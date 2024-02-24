@@ -51,7 +51,7 @@ const Logo: FunctionComponent<Props> = ({ href, noText, size = 'medium', variant
 
   const textToRender = useMemo(
     () =>
-      // TODO: Add real text here
+
       noText ? null : (
         <div className={styles.textWrap}>
           <span className={`${styles.text} ${styles[size]}`}>Как Делать Продукты</span>
