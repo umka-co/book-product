@@ -4,6 +4,7 @@ const NewProductVsExistingPage = () => {
   return (
     <BookPage
       header="А нужно ли создавать новый продукт?"
+      headerLink='/new-product-vs-existing-solution/'
       link="/business-as-1-10-100/"
       quote="Продавать свое так же сложно как продавать чужое, производить «собственный продукт» имеет смысл только если вы получаете ощутимое преимущество на рынке от этого."
     >

@@ -6,6 +6,7 @@ const WhereToBeginPage = () => {
   return (
     <BookPage
       header="С чего начать?"
+      headerLink='/where-to-begin'
       link="/new-product-vs-existing-solution/"
       quote="Лучше все просчитать и бросить, чем потратить годы жизни на заведомо «тупиковое» решение."
     >

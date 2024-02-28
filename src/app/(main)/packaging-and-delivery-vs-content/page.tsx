@@ -4,6 +4,7 @@ const PackagingDeliveryPage = () => {
   return (
     <BookPage
       header="Почему упаковка и доставка важнее содержимого?"
+      headerLink='/packaging-and-delivery-vs-content/'
       link="/doing-from-the-end/"
       quote="Наличие расфасованного товара (упаковка) в локации потребления (доставка) важнее самого содержимого (продукта)."
     >

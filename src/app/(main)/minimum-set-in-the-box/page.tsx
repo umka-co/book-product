@@ -4,6 +4,7 @@ const MinimumSetPage = () => {
   return (
     <BookPage
       header="Что такое «минимальный набор в коробке»?"
+      headerLink='/minimum-set-in-the-box/'
       link="/packaging-and-delivery-vs-content/"
       quote="Дайте клиенту все самое необходимое как можно быстрее. Свистелки-перделки™ будете добавлять потом, может и без них ваш продукт отлично продается."
     >

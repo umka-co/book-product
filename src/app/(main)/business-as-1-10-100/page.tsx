@@ -4,12 +4,12 @@ const BusinessPage = () => {
     return(
         <BookPage
         header="Что за формула «1->10->100» ?"
+        headerLink='/business-as-1-10-100/'
         link="/goods-product-or-service/"
         quoteList
         factOne="Не носимся с идей как с «писаной торбой»."
         factTwo="На изготовление/производство тратим не больше 10% средств и времени."
         factThree="Все оставшееся время и силы тратим на продажи и привлечение клиентов."
-        quote=""
         >
     <Typo>Есть старая поговорка:</Typo>
     <Typo variant="list">

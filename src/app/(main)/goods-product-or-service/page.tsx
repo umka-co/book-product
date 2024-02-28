@@ -4,6 +4,7 @@ const GoodsProductServicePage = () => {
   return (
     <BookPage
       header="У нас товар, продукт или сервис?"
+      headerLink='/goods-product-or-service/'
       link="/create-or-sell-first/"
       quote="Четко определитесь что в вашем продукте «приносит деньги» — тратьте время и силы только на это. Все остальное можно сделать чужими руками, просто заработайте деньги на это."
     >

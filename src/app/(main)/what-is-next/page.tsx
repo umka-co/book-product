@@ -4,6 +4,7 @@ const WhatIsNextPage = () => {
   return (
     <BookPage
       header="Что же дальше?"
+      headerLink='/what-is-next/'
       link=""
       quote="В жизни любого продукта наступает «конец», будьте готовы создавать новые продукты, еще и еще."
     >
