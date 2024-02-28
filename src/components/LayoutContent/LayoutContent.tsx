@@ -12,7 +12,7 @@ const LayoutContent: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const contentClassName = useMemo(
     () =>
       [styles.content, isNarrow ? styles.narrow : isMobile ? styles.mobile :  styles.desktop].filter(Boolean).join(' '),
-    [isMobile]
+    [isMobile, isNarrow]
   );
   return (
     <Stack className={styles.wrapper} direction={direction} gap="5rem">

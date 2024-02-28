@@ -10,7 +10,7 @@ const NavBar: FunctionComponent = () => {
   const isMobile = useIsMobile()
   const isNarrow = useIsMobile(1100)
   const className = useMemo(()=>[styles.wrapper, isNarrow? styles.narrow : isMobile ? styles.mobile :  styles.desktop].filter(Boolean).join(' '),
-  [isMobile])
+  [isMobile, isNarrow])
   return (
     <Stack className={className}>
       <hr />
