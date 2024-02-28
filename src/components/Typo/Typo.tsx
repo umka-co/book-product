@@ -45,6 +45,7 @@ export interface TypoProps extends PropsWithChildren<HTMLAttributes<HTMLElement>
   className?: string;
   children: ReactNode;
   color?: TypoColor;
+  italic?: boolean;
   tag?: keyof JSX.IntrinsicElements;
   variant?: TypoVariant;
   underline?: boolean;
@@ -58,6 +59,7 @@ export interface TypoProps extends PropsWithChildren<HTMLAttributes<HTMLElement>
  * @param {boolean} [bold] - whether to render bold text or not
  * @param {boolean} [capitalize] - whether to render capitalize text or not
  * @param {TypoColor} [color] - color to render, defaults to 'dark'
+ * @param {boolean} [italic] - whether to render italic text or not
  * @param {string} [tag] - HTML tag to render, defaults to 'span'
  * @param {string} [variant] - variant to render, defaults to 'text'
  * @param {boolean} [underline] - whether to render underline text or not
@@ -70,6 +72,7 @@ const Typo: FunctionComponent<TypoProps> = ({
   children,
   className,
   color = 'dark',
+  italic,
   style,
   variant = 'text',
   tag = getTagByVariant(variant), // Must be defined after .variant property!!!
@@ -88,13 +91,14 @@ const Typo: FunctionComponent<TypoProps> = ({
       align && styles[align],
       bold && styles.bold,
       capitalize && styles.capitalize,
+      italic && styles.italic,
       underline && styles.underline,
       uppercase && styles.uppercase,
       className,
     ];
     const resultAsString: string = resultAsArray.filter(Boolean).join(' ');
     return Boolean(resultAsString) ? resultAsString : undefined;
-  }, [align, bold, color, capitalize, className, isMobile, variant, underline, uppercase]);
+  }, [align, bold, color, capitalize, className, isMobile, italic, variant, underline, uppercase]);
 
   const styleToRender = useMemo(
     () => ({

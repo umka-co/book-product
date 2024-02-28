@@ -2,6 +2,7 @@
 import { FunctionComponent, PropsWithChildren, useMemo, KeyboardEvent, useCallback, AnchorHTMLAttributes } from 'react';
 import NextLink, { LinkProps as NextLinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
+import Typo from '../Typo';
 
 export interface LinkProps extends PropsWithChildren<NextLinkProps & AnchorHTMLAttributes<HTMLAnchorElement>> {
   activeClassName?: string;

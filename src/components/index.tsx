@@ -1,3 +1,4 @@
+import BookPage from './BookPage';
 import Button from './Button';
 import Icon from './Icon';
 import LayoutContent from './LayoutContent';
@@ -14,6 +15,7 @@ import Wrapper from './Wrapper';
 
 // Note: Re-export only frequently used components to avoid the mess in codebase
 export {
+  BookPage,
   Button,
   Icon,
   LayoutContent,

@@ -11,6 +11,11 @@
   max-width: 60%;
 }
 
+.narrow {
+  margin: 3rem 1rem;
+  max-width: 80%;
+}
+
 .mobile {
   margin: 1rem;
   width: 100%;

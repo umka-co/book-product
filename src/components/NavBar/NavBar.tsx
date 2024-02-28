@@ -8,7 +8,8 @@ import styles from './NavBar.module.css';
 
 const NavBar: FunctionComponent = () => {
   const isMobile = useIsMobile()
-  const className = useMemo(()=>[styles.wrapper, isMobile ? styles.mobile : styles.desktop].filter(Boolean).join(' '),
+  const isNarrow = useIsMobile(1100)
+  const className = useMemo(()=>[styles.wrapper,isNarrow? styles.narrow : isMobile ? styles.mobile :  styles.desktop].filter(Boolean).join(' '),
   [isMobile])
   return (
     <Stack className={className}>

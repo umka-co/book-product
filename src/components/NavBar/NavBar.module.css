@@ -17,3 +17,8 @@
   margin: 1rem;
   width: 90%;
 }
+
+.narrow{
+  margin:3rem 1rem;
+  max-width: 80%;
+}
