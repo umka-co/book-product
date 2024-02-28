@@ -1,4 +1,4 @@
-import { Wrapper } from '@/components';
+import { Stack } from '@/components';
 import WhereToBeginPage from '../where-to-begin/page';
 import NewProductVsExistingPage from '../new-product-vs-existing-solution/page';
 import BusinessPage from '../business-as-1-10-100/page';
@@ -15,7 +15,7 @@ import WhatIsNextPage from '../what-is-next/page';
  */
 const BookPage = () => {
   return (
-    <Wrapper>
+    <Stack gap='2rem'>
       <WhereToBeginPage/>
       <NewProductVsExistingPage/>
       <BusinessPage/>
@@ -25,7 +25,7 @@ const BookPage = () => {
       <PackagingDeliveryPage/>
       <DoingFromEndPage/>
       <WhatIsNextPage/>
-    </Wrapper>
+    </Stack>
   );
 };
 

@@ -29,9 +29,6 @@ const NavBar: FunctionComponent = () => {
       </Typo>
      <TableOfContent/>
       <hr />
-      <Typo tag="h4" variant="header3">
-        РУБРИКИ
-      </Typo>
     </Stack>
   );
 };
