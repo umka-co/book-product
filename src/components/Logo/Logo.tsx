@@ -7,9 +7,9 @@ type LogoSize = 'small' | 'medium' | 'large';
 type LogoVariant = 'default' | 'light' | 'dark';
 
 const VARIANT_TO_SRC: Record<LogoVariant, string> = {
-  default: '/img/logo/logo-256.png',
-  light: '/img/logo/logo-256.png',
-  dark: '/img/logo/logo-256.png',
+  default: '/img/logo/logo-320.png',
+  light: '/img/logo/logo-320.png',
+  dark: '/img/logo/logo-320.png',
 };
 
 const SIZE_TO_PROPS: Record<LogoSize, object> = {

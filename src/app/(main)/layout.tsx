@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 import MobileOrDesktop from '@/components/MobileOrDesktop';
 import StylesInjector from '@/components/StylesInjector';
 import './main.css';
-import { LayoutContent, NavBar, Stack } from '@/components';
+import { LayoutContent} from '@/components';
 import { useIsMobile } from '@/hooks';
 
 export const metadata: Metadata = {

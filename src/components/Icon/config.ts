@@ -5,6 +5,7 @@ import { BsFillArrowRightCircleFill, BsPatchCheck } from 'react-icons/bs';
 import {
   // FaRegFrown,
   // FaApple,
+  FaBookmark,
   FaCheckCircle,
   FaChevronLeft,
   FaChevronRight,
@@ -35,6 +36,7 @@ export const ICONS /*: Record<string, ComponentType>*/ = {
 
   arrowleft: FaChevronLeft,
   arrowright: FaChevronRight,
+  book:FaBookmark,
   check: FaCheckCircle,
   checkcurly: BsPatchCheck,
 

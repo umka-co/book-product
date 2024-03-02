@@ -1,7 +1,6 @@
 import { APP_NAME, APP_SHORT_NAME, PUBLIC_URL } from '@/config';
-import { Button, Icon, Link, SocialMedia, Stack, Typo, Wrapper } from '@/components';
-import { ICONS, IconName } from '@/components/Icon';
-import DownloadButton from '@/components/DownloadButton';
+import { Button, Icon, Link, Stack, Typo, Wrapper } from '@/components';
+
 
 /**
  * Home page content

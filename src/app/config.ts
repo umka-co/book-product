@@ -4,10 +4,10 @@ import { APP_NAME, PUBLIC_URL } from '@/config';
 export const OPEN_GRAPH_DEFAULT: Metadata['openGraph'] = {
   url: PUBLIC_URL,
 
-  // TODO: Put your texts here
-  siteName: `${APP_NAME} Website`,
+
+  siteName: `${APP_NAME}`,
   title: APP_NAME,
-  description: `TODO: OpenGraph description for ${APP_NAME}, put nice Promo here`,
+  description: `Читать ${APP_NAME}`,
 
   // TODO: Replace with your own images and dimensions
   images: [

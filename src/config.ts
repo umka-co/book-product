@@ -10,5 +10,4 @@ export const PUBLIC_URL = envRequired(process.env.NEXT_PUBLIC_PUBLIC_URL);
 export const APP_NAME = 'Как Делать Продукты - Книга';
 export const APP_SHORT_NAME = 'Книга';
 
-
 export const OWNER = 'Anton Karpenko'
