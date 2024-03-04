@@ -4,13 +4,12 @@ import Stack from '../Stack';
 import Wrapper from '../Wrapper';
 import Typo from '../Typo';
 import Link from '../Link';
-import { useRouter } from 'next/router';
 import { usePathname } from 'next/navigation';
 
 interface Props extends PropsWithChildren {
   header: string;
   headerLink: string;
-  link: string;
+  nextPage: string;
   quote?: string;
   quoteList?: boolean;
   factOne?: string;
@@ -22,7 +21,7 @@ const BookPage: FunctionComponent<Props> = ({
   children,
   header,
   headerLink,
-  link,
+  nextPage,
   quote,
   quoteList,
   factOne,
@@ -59,7 +58,7 @@ const BookPage: FunctionComponent<Props> = ({
           )}
         </Typo>
         <Typo>
-          <Link href={link}>Читать дальше…</Link>
+          <Link href={nextPage}>Читать дальше…</Link>
         </Typo>
       </Stack>
     </Wrapper>

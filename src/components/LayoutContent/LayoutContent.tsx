@@ -1,9 +1,9 @@
 'use client';
 import { FunctionComponent, PropsWithChildren, useMemo } from 'react';
-import NavBar from '../NavBar';
 import Stack from '../Stack';
 import { useIsMobile } from '@/hooks';
 import styles from './LayoutContent.module.css';
+import NavBar from '../NavBar';
 
 const LayoutContent: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const isMobile = useIsMobile();

@@ -1,5 +1,5 @@
 import { PUBLIC_URL } from '@/config';
-import { content, title } from '@/content/how-everything-began';
+import { content, link, title } from '@/app/[content]/how-everything-began';
 
 
 /**
@@ -14,7 +14,7 @@ const HowEverythingBeganPage = () => content;
 export const metadata = {
   title,
   alternates: {
-    canonical: `${PUBLIC_URL}/about-book/`,
+    canonical: `${PUBLIC_URL}${link}`,
   },
 };
 

@@ -4,10 +4,10 @@ import Icon from './Icon';
 import LayoutContent from './LayoutContent';
 import Link from './Link';
 import Logo from './Logo';
-import NavBar from './NavBar';
 import Picture from './Picture';
 import SocialMedia from './SocialMedia';
 import Stack from './Stack';
+import SupportButtons from './SupportButtons';
 import TableOfContent from './TableOfContent/TableOfContent';
 import Typo from './Typo';
 import Video from './Video';
@@ -21,10 +21,10 @@ export {
   LayoutContent,
   Link,
   Logo,
-  NavBar,
   Picture,
   SocialMedia,
   Stack,
+  SupportButtons,
   TableOfContent,
   Typo,
   Video,
