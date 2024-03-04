@@ -4,9 +4,7 @@ import { content, link, title } from '@/app/[content]/home';
  * Home page content
  * @page Home
  */
-const HomePage = () => {
-  return content;
-};
+const HomePage = () => content
 
 /**
  * MetaData for the page

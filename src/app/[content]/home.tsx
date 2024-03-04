@@ -2,7 +2,7 @@ import {  Link, Stack, SupportButtons, Typo, Wrapper } from '@/components';
 import { APP_NAME, APP_SHORT_NAME, PUBLIC_URL } from '@/config';
 
 export const title = `Читать ${APP_NAME}`
-export const link = {PUBLIC_URL}
+export const link = PUBLIC_URL
 
 export const content = (
   <Wrapper tag="article">
