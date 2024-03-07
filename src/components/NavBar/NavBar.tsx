@@ -6,6 +6,8 @@ import SupportButtons from '../SupportButtons';
 import Stack from '../Stack';
 import Typo from '../Typo';
 
+
+
 const NavBar: FunctionComponent = () => {
   const isMobile = useIsMobile();
   const isNarrow = useIsMobile(1100);

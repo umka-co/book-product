@@ -15,6 +15,7 @@ interface Props extends PropsWithChildren {
   factOne?: string;
   factTwo?: string;
   factThree?: string;
+  tags?: string[];
 }
 
 const BookPage: FunctionComponent<Props> = ({
@@ -27,6 +28,7 @@ const BookPage: FunctionComponent<Props> = ({
   factOne,
   factTwo,
   factThree,
+  tags,
 }) => {
   const typoVariant = quoteList ? 'list' : 'header2';
   const router = usePathname();
@@ -60,6 +62,7 @@ const BookPage: FunctionComponent<Props> = ({
         <Typo>
           <Link href={nextPage}>Читать дальше…</Link>
         </Typo>
+        {/* <CurrentTags tags={tags} /> */}
       </Stack>
     </Wrapper>
   );

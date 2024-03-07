@@ -1,6 +1,5 @@
 import { PUBLIC_URL } from '@/config';
-import { content, link, title } from '@/app/[content]/how-everything-began';
-
+import { content, link, title } from '@/components/[content]/how-everything-began';
 
 /**
  * How Everything Began page

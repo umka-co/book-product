@@ -1,12 +1,12 @@
 import { APP_NAME, PUBLIC_URL } from '@/config';
-import { content, link, title } from '@/app/[content]/table-of-contents';
+import { content, link, title } from '@/components/[content]/table-of-contents';
 
 /**
  * Table of Content page
  * @page Table of Content
  */
 const TableOfContentPage = () => {
-  return content
+  return content;
 };
 
 /**

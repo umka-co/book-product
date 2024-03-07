@@ -1,11 +1,7 @@
-import { content, link, title } from '@/components/[content]/book';
+import { content, link, title } from '@/components/[content]/minimum-set-in-the-box';
 import { PUBLIC_URL } from '@/config';
 
-/**
- * Book page content
- * @page Book
- */
-const BookPage = () => content;
+const MinimumSetPage = () => content;
 
 /**
  * MetaData for the page
@@ -16,5 +12,4 @@ export const metadata = {
     canonical: `${PUBLIC_URL}${link}`,
   },
 };
-
-export default BookPage;
+export default MinimumSetPage;

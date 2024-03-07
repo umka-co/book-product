@@ -9,6 +9,7 @@
   margin: 0 auto;
   margin-top: 2rem;
   width: 100%;
+
 }
 
 .container {
@@ -91,6 +92,7 @@
 
 .menu a {
   white-space: nowrap;
+  color: var(--color-primary);
 }
 
 .desktop .menu a {
@@ -103,8 +105,8 @@
   /* transition: 0.3s all; */
 }
 
-.copyright {
-  color: var(--color-headerAndFooterText);
+.copyright, .copyright a{
+  color: var(--color-primary);
   padding-top: 0.5rem;
 }
 

@@ -21,6 +21,5 @@
   width: 100%;
 }
 
-.content a :not(.button) {
-  color: var(--color-secondary);
-}
+
+
