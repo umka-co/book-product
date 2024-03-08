@@ -8,7 +8,11 @@ import { SMART_TAGS, TAGS, Tag } from './config';
  * @returns {string} Relative URL
  */
 export function tagToUrl(tag: string): string {
-  return `/tag/${encodeURI(tag.replace(/ /g, '-'))}/`;
+  return `/tag/${
+    //encodeURI(
+    tag.toLocaleLowerCase().replace(/ /g, '-')
+    //  )
+  }/`;
 }
 
 /**

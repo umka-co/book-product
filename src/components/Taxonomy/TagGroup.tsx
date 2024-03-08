@@ -1,8 +1,7 @@
 import { FunctionComponent, HTMLAttributes } from 'react';
 import Typo from '../Typo';
-
-import styles from './Taxonomy.module.css';
 import Tag from './Tag';
+import styles from './Taxonomy.module.css';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   tags?: string[];

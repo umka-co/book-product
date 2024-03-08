@@ -22,47 +22,16 @@ const SingleTagPage: NextPage<Props> = async ({ params: { slug } }) => {
   const pageSlugs = await getAllPageSlugs();
   for (const pageSlug of pageSlugs) {
     const page = await getPageBySlug(pageSlug);
-    if (page.tags?.includes(slug)) {
+    page.slug = pageSlug;
+    const tags = page.tags?.map((current) => current.toLocaleLowerCase());
+    if (tags?.includes(slug.toLocaleLowerCase())) {
       pagesWithTag.push(page);
     }
   }
   return (
     <Wrapper tag="section">
       <Typo variant="header1">Tag: &quot;{tagTitle}&quot;</Typo>
-      {pagesWithTag.map(({ content, slug = '/', tags = [], title }) => (
-        <article key={title}>
-          {title && (
-            <Typo variant="header2">
-              <Link href={`/book/${slug}`}>{title}</Link>
-            </Typo>
-          )}
-          {content}
-          {/* {cats?.length > 0 && <CategoryGroup cats={cats} />} */}
-          {tags?.length > 0 && <TagGroup tags={tags} />}
-        </article>
-      ))}
-    </Wrapper>
-  );
-};
-
-const SingleTagPageOld: NextPage<Props> = async ({ params: { slug } }) => {
-  const tag = getTagBySlug(slug);
-  const slugs = await getAllPageSlugs();
-  console.log('slugs', slugs);
-  const pages: Page[] = slugs.map((current) => {
-    const page = getPageBySlug(current);
-    return page;
-  });
-  console.log('pages', pages);
-  console.log('tag', tag);
-  const pagesWithTag = pages.filter((current: Page) => {
-    console.log('current tag', current);
-    return current.tags?.includes(tag.name);
-  });
-  return (
-    <Wrapper tag="section">
-      <Typo variant="header1">Tag: &quot;{capitalizeAllWords(tag.name)}&quot;</Typo>
-      {pagesWithTag.map(({ content, cats = [], slug = '/', tags = [], title }) => (
+      {pagesWithTag.map(({ content, slug = '', tags = [], title }) => (
         <article key={title}>
           {title && (
             <Typo variant="header2">
