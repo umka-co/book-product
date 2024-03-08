@@ -1,3 +1,5 @@
+import { unique } from 'next/dist/build/utils';
+import { Page, getAllPageSlugs, getPageBySlug } from '../book/utils';
 import { SMART_TAGS, TAGS, Tag } from './config';
 
 /**
@@ -13,7 +15,22 @@ export function tagToUrl(tag: string): string {
  * Returns list of unique Tags from all content files
  * @returns {Promise<string[]>} List of Tags as strings
  */
-export async function getTagList() {
+export async function getTagList(): Promise<string[]> {
+  let allTags: string[] = [];
+  const pageSlugs = await getAllPageSlugs();
+  for (const slug of pageSlugs) {
+    const { tags } = await getPageBySlug(slug);
+    if (Array.isArray(tags)) {
+      allTags.push(...tags);
+    }
+  }
+  const uniqueTags: string[] = Array.from(new Set(allTags.map((current) => current.toLocaleLowerCase())));
+  // console.log('unique:', uniqueTags, 'all', allTags);
+  const result = uniqueTags.sort((a, b) => a.localeCompare(b));
+  return result;
+}
+
+export async function getTagListOld() {
   const uniqueTags = TAGS.sort((a, b) => a.name.localeCompare(b.name)).map((current) => current.slug);
   return uniqueTags;
 }

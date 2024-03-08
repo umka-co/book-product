@@ -1,7 +1,7 @@
 import { BookPage, Typo } from '@/components';
 
 export const cat = 'Книга';
-export const tags = ['Зачем', 'Как'];
+export const tags = ['tag1', 'tag3', 'Зачем', 'Как'];
 export const title = 'Сначала создать или сначала продать?';
 export const link = '/create-or-sell-first/';
 
