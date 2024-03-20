@@ -28,10 +28,10 @@ const BookPage: FunctionComponent<Props> = ({
   factOne,
   factTwo,
   factThree,
-  tags,
 }) => {
   const typoVariant = quoteList ? 'list' : 'header2';
   const router = usePathname();
+  const href = '/book' + nextPage;
 
   return (
     <Wrapper tag="article">
@@ -60,9 +60,8 @@ const BookPage: FunctionComponent<Props> = ({
           )}
         </Typo>
         <Typo>
-          <Link href={nextPage}>Читать дальше…</Link>
+          <Link href={href}>Читать дальше…</Link>
         </Typo>
-        {/* <CurrentTags tags={tags} /> */}
       </Stack>
     </Wrapper>
   );

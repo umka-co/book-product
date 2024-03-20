@@ -39,12 +39,6 @@ export async function getTagListOld() {
   return uniqueTags;
 }
 
-export async function getCurrentTagList(tags: string[]) {
-  // let tagsList = tags.includes(SMART_TAGS) && tags.map((current) => (current = SMART_TAGS));
-  // const tagsList = tags.reduce(())
-  // return tagsList;
-}
-
 export function getTagBySlug(slug: string): Tag {
   const result = TAGS.find((current) => slug === current.slug) ?? TAGS[0];
   return result;

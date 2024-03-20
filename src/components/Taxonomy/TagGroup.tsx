@@ -2,6 +2,7 @@ import { FunctionComponent, HTMLAttributes } from 'react';
 import Typo from '../Typo';
 import Tag from './Tag';
 import styles from './Taxonomy.module.css';
+import Stack from '../Stack';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   tags?: string[];
@@ -14,7 +15,15 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 const TagsGroup: FunctionComponent<Props> = ({ className, tags = [], ...restOfProps }) => {
   const classesToRender = [styles.group, className].filter(Boolean).join(' ');
   return (
-    <div className={classesToRender} {...restOfProps}>
+    <Stack
+      alignItems="center"
+      className={classesToRender}
+      direction="row"
+      justifyContent="flex-start"
+      margin="0.5rem 0 0 0"
+      padding="0rem 0.5rem"
+      {...restOfProps}
+    >
       <Typo bold>Tags:</Typo>
       <ul role="group">
         {tags.map((tag) => (
@@ -23,7 +32,7 @@ const TagsGroup: FunctionComponent<Props> = ({ className, tags = [], ...restOfPr
           </li>
         ))}
       </ul>
-    </div>
+    </Stack>
   );
 };
 

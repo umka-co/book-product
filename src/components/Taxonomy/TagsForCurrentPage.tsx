@@ -18,7 +18,7 @@ const TagsForCurrentPage = () => {
     fetchTags();
   }, [pathname]);
 
-  return <TagGroup tags={tags} />;
+  return pathname !== '/book/' ? <TagGroup tags={tags} /> : null;
 };
 
 export default TagsForCurrentPage;

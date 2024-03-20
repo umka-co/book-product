@@ -11,7 +11,7 @@
   --color-text: #222222;
   --color-background: #ffffff;
   --color-headerAndFooter: #272727;
-  --color-whiteText: #f0f0f0;
+  --color-whiteText: #ffffff;
 
   --color-primary: #f37208;
   --color-secondary: #156da3;
@@ -27,13 +27,12 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-secondary)
+  color: var(--color-secondary);
 }
 
 hr {
   border: 2px solid black;
 }
-
 
 #button {
   color: var(--color-whiteText);

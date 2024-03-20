@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { APP_NAME } from '@/config';
 import { Button, Stack, Typo, Wrapper } from '@/components';
 import { getTagList, tagToUrl } from './utils';
+import Tag from '@/components/Taxonomy/Tag';
 
 /**
  * Renders a page with a list of all tags.
@@ -14,9 +15,7 @@ const AllTagsPage = async () => {
       <Typo variant="header1">All Tags</Typo>
       <Stack direction="row">
         {tags.map((tag) => (
-          <Button key={tag} href={tagToUrl(tag)} variant="text">
-            {tag}
-          </Button>
+          <Tag tag={tag} />
         ))}
       </Stack>
     </Wrapper>

@@ -1,4 +1,4 @@
-import { content, link, title } from '@/components/[content]/home';
+import { content, link, title } from './config';
 
 /**
  * Home page content

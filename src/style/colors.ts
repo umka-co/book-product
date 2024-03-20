@@ -5,7 +5,7 @@ export const COLORS = {
   text: '#222222', // Text color
   background: '#FFFFFF', // Background color and contrast color for icons
   headerAndFooter: '#272727', // Background color for header and footer
-  whiteText: '#f0f0f0', // Text color for header and footer
+  whiteText: '#ffffff', // Text color for header and footer
   primary: '#f37208',
   secondary: '#156da3',
   success: '#008000',

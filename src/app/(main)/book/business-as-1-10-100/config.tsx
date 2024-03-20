@@ -9,7 +9,7 @@ export const content = (
   <BookPage
     header={title}
     headerLink={link}
-    nextPage="/book/goods-product-or-service/"
+    nextPage="/goods-product-or-service/"
     quoteList
     factOne="Не носимся с идей как с «писаной торбой»."
     factTwo="На изготовление/производство тратим не больше 10% средств и времени."
