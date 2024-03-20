@@ -1,10 +1,15 @@
-import { APP_NAME } from '@/config';
-import { content } from './config';
-
-export const cat = 'История';
-export const title = APP_NAME;
-export const link = '/book/';
+import { PUBLIC_URL } from '@/config';
+import { content, link, title } from './config';
 
 const BookPage = () => content;
 
+/**
+ * MetaData for the page
+ */
+export const metadata = {
+  title,
+  alternates: {
+    canonical: `${PUBLIC_URL}${link}`,
+  },
+};
 export default BookPage;

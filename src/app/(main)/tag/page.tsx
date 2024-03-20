@@ -15,7 +15,7 @@ const AllTagsPage = async () => {
       <Typo variant="header1">All Tags</Typo>
       <Stack direction="row">
         {tags.map((tag) => (
-          <Tag tag={tag} />
+          <Tag key={tag} tag={tag} />
         ))}
       </Stack>
     </Wrapper>
