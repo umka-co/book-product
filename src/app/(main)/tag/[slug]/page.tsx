@@ -36,7 +36,6 @@ const SingleTagPage: NextPage<Props> = async ({ params: { slug } }) => {
     const tags = page.tags?.map((current) =>
       cyrillicPattern ? cyrillicToTranslit.transform(current.toLocaleLowerCase()) : current.toLocaleLowerCase()
     );
-    console.log('tags inside for', wasCyrillic);
     if (tags?.includes(slug.toLocaleLowerCase())) {
       pagesWithTag.push(page);
     }

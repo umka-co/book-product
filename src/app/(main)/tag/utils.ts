@@ -29,7 +29,6 @@ export async function getTagList(): Promise<string[]> {
     }
   }
   const uniqueTags: string[] = Array.from(new Set(allTags.map((current) => current.toLocaleLowerCase())));
-  // console.log('unique:', uniqueTags, 'all', allTags);
   const result = uniqueTags.sort((a, b) => a.localeCompare(b));
   return result;
 }

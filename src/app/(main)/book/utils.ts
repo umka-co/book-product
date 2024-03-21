@@ -19,7 +19,6 @@ export async function getAllPageSlugs(): Promise<string[]> {
   const dirNames = [];
   try {
     const files = await readdir(directoryPath);
-    console.log('files', files);
     for (const fileName of files) {
       if (await isDirectory(directoryPath + '/' + fileName)) {
         dirNames.push(fileName);
