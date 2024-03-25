@@ -1,6 +1,6 @@
 'use server';
-import { PathLike } from 'node:fs';
-import { readdir, lstat } from 'node:fs/promises';
+import { PathLike, lstatSync } from 'node:fs';
+import { readdir } from 'node:fs/promises';
 import { ReactNode } from 'react';
 
 export type Page = {
@@ -11,8 +11,8 @@ export type Page = {
   tags?: string[];
 };
 
-const isDirectory = async (source: PathLike) => (await lstat(source)).isDirectory();
-// const isDirectory = (source: PathLike) => lstatSync(source).isDirectory();
+// const isDirectory = async (source: PathLike) => (await lstat(source)).isDirectory();
+const isDirectory = (source: PathLike) => lstatSync(source).isDirectory();
 
 export async function getAllPageSlugs(): Promise<string[]> {
   const directoryPath = 'src/app/(main)/book';

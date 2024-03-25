@@ -1,4 +1,4 @@
-import { content, link, title } from '@/components/[content]/packaging-and-delivery-vs-content';
+import { content, link, title } from './config';
 import { PUBLIC_URL } from '@/config';
 
 const PackagingDeliveryPage = () => content;

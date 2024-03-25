@@ -1,7 +1,7 @@
 import { BookPage, Typo } from '@/components';
 
 export const cat = 'Книга';
-export const tags = ['Tag1', 'tag2', 'время', 'деньги', 'кто', 'почему'];
+export const tags = ['время', 'деньги', 'кто', 'почему'];
 export const title = 'Что за формула «1->10->100» ?';
 export const link = '/book/business-as-1-10-100/';
 

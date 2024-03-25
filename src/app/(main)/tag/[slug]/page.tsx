@@ -1,11 +1,10 @@
 import { Metadata, NextPage } from 'next';
 import { APP_NAME, IS_DEBUG } from '@/config';
-import { capitalizeAllWords } from '@/utils';
+import { capitalizeAllWords, toCyrillic, toLatin } from '@/utils';
 import { Link, Typo, Wrapper } from '@/components';
 import { TagGroup } from '@/components/Taxonomy';
-import { getTagBySlug, getTagList } from '../utils';
+import { getTagList, normalizeTag, tagToText } from '../utils';
 import { Page, getAllPageSlugs, getPageBySlug } from '../../book/utils';
-import CyrillicToTranslit from 'cyrillic-to-translit-js';
 
 interface Props {
   params: {
@@ -18,32 +17,23 @@ interface Props {
  * @page SingleTag
  */
 const SingleTagPage: NextPage<Props> = async ({ params: { slug } }) => {
-  const cyrillicToTranslit = CyrillicToTranslit();
-  const cyrillicPattern = /^[\u0400-\u04FF]+$/;
-
-  let tagTitle;
-
   const pagesWithTag: Page[] = [];
   const pageSlugs = await getAllPageSlugs();
   for (const pageSlug of pageSlugs) {
     const page = await getPageBySlug(pageSlug);
-    const wasCyrillic = page.tags?.map(
-      (current) =>
-        cyrillicToTranslit.transform(current.toLocaleLowerCase()) === slug.toLocaleLowerCase() &&
-        (tagTitle = capitalizeAllWords(current))
-    );
     page.slug = pageSlug;
-    const tags = page.tags?.map((current) =>
-      cyrillicPattern ? cyrillicToTranslit.transform(current.toLocaleLowerCase()) : current.toLocaleLowerCase()
-    );
-    if (tags?.includes(slug.toLocaleLowerCase())) {
+
+    const pageTags = page.tags?.map((currentTag) => toLatin(normalizeTag(currentTag)));
+    if (pageTags?.includes(slug.toLocaleLowerCase())) {
       pagesWithTag.push(page);
     }
   }
 
+  const title = tagToText(slug);
+
   return (
     <Wrapper tag="section">
-      <Typo variant="header1">Tag: &quot;{tagTitle}&quot;</Typo>
+      <Typo variant="header1">Tag: &quot;{title}&quot;</Typo>
       {pagesWithTag.map(({ content, slug = '', tags = [], title }) => (
         <article key={title}>
           {title && (
@@ -62,12 +52,12 @@ const SingleTagPage: NextPage<Props> = async ({ params: { slug } }) => {
 
 /**
  * Returns list of all mentioned tags to generate static pages.
+ * All tags are in latin lowercase
  * @returns {Promise<{ tag: string }[]>} List of all tags.
  */
 export async function generateStaticParams() {
   const tags = await getTagList();
-  const cyrillicToTranslit = CyrillicToTranslit();
-  const result = tags.map((current) => ({ slug: cyrillicToTranslit.transform(current) }));
+  const result = tags.map((current) => ({ slug: toLatin(normalizeTag(current)) }));
   IS_DEBUG && console.log('tag.generateStaticParams()', JSON.stringify(result));
   return result;
 }
@@ -76,7 +66,8 @@ export async function generateStaticParams() {
  * Generates MetaData for the page based on the route params.
  */
 export async function generateMetadata({ params: { slug } }: Props): Promise<Metadata> {
-  const normalizedTag = getTagBySlug(slug).name;
+  // const normalizedTag = getTagBySlug(slug).name;
+  const normalizedTag = capitalizeAllWords(slug);
   const title = `${normalizedTag} - Tag - ${APP_NAME}`;
   return { title };
 }

@@ -27,7 +27,6 @@
   "dependencies": {
     "@amplitude/analytics-browser": "latest",
     "@emailjs/browser": "latest",
-    "cyrillic-to-translit-js": "^3.2.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",

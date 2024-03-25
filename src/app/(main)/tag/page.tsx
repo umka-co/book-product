@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { APP_NAME } from '@/config';
-import { Button, Stack, Typo, Wrapper } from '@/components';
-import { getTagList, tagToUrl } from './utils';
+import { Stack, Typo, Wrapper } from '@/components';
+import { getTagList } from './utils';
 import Tag from '@/components/Taxonomy/Tag';
 
 /**
@@ -27,6 +27,7 @@ const AllTagsPage = async () => {
  */
 export async function generateMetadata(): Promise<Metadata> {
   const tags = await getTagList();
+  // console.log('tags:', tags);
   const title = `Tags - ${APP_NAME}`;
   const keywords = tags.join(', ');
   return { keywords, title };

@@ -1,4 +1,4 @@
-import { content, link, title } from '@/components/[content]/new-product-vs-existing-solution';
+import { content, link, title } from './config';
 import { PUBLIC_URL } from '@/config';
 
 const NewProductVsExistingPage = () => content;

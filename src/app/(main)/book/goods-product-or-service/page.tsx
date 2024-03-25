@@ -1,4 +1,4 @@
-import { content, link, title } from '@/components/[content]/goods-product-or-service';
+import { content, link, title } from './config';
 import { PUBLIC_URL } from '@/config';
 
 const GoodsProductServicePage = () => content;

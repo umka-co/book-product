@@ -1,4 +1,4 @@
-import { content, link, title } from '@/components/[content]/what-is-next';
+import { content, link, title } from './config';
 import { PUBLIC_URL } from '@/config';
 
 const WhatIsNextPage = () => content;
