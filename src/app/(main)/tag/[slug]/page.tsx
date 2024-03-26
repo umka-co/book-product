@@ -3,8 +3,9 @@ import { APP_NAME, IS_DEBUG } from '@/config';
 import { capitalizeAllWords, toLatin } from '@/utils';
 import { Link, Typo, Wrapper } from '@/components';
 import { TagGroup } from '@/components/Taxonomy';
-import { getTagList, normalizeTag, tagToText } from '../utils';
+import { getTagList } from '../utils';
 import { Page, getAllPageSlugs, getPageBySlug } from '../../book/utils';
+import { normalizeTag, tagToText } from '@/components/Taxonomy/utils';
 
 interface Props {
   params: {
