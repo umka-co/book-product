@@ -1,6 +1,6 @@
 import { Metadata, NextPage } from 'next';
 import { APP_NAME, IS_DEBUG } from '@/config';
-import { capitalizeAllWords, toCyrillic, toLatin } from '@/utils';
+import { capitalizeAllWords, toLatin } from '@/utils';
 import { Link, Typo, Wrapper } from '@/components';
 import { TagGroup } from '@/components/Taxonomy';
 import { getTagList, normalizeTag, tagToText } from '../utils';
