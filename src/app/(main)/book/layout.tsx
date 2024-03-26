@@ -1,4 +1,4 @@
-import { TagsForCurrentPage } from '@/components/Taxonomy';
+// import { TagsForCurrentPage } from '@/components/Taxonomy';
 import { FunctionComponent, PropsWithChildren } from 'react';
 
 /**
@@ -6,10 +6,10 @@ import { FunctionComponent, PropsWithChildren } from 'react';
  */
 const SinglePageLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
-    <div>
+    <>
       {children}
-      <TagsForCurrentPage />
-    </div>
+      {/* <TagsForCurrentPage /> */}
+    </>
   );
 };
 
