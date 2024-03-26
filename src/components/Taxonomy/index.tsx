@@ -1,9 +1,9 @@
 import TagGroup from './TagGroup';
-import CategoryGroup from './CategoryGroup';
+// import CategoryGroup from './CategoryGroup';
 // import TagsForCurrentPage from './TagsForCurrentPage';
 
 export {
   TagGroup,
-  CategoryGroup,
+  //   CategoryGroup,
   // TagsForCurrentPage
 };

@@ -1,10 +1,11 @@
-'use client';
+// 'use client';
 import { FunctionComponent, PropsWithChildren } from 'react';
+// import { usePathname } from 'next/navigation';
 import Stack from '../Stack';
 import Wrapper from '../Wrapper';
 import Typo from '../Typo';
 import Link from '../Link';
-import { usePathname } from 'next/navigation';
+import { TagGroup } from '../Taxonomy';
 
 interface Props extends PropsWithChildren {
   header: string;
@@ -28,25 +29,27 @@ const BookPage: FunctionComponent<Props> = ({
   factOne,
   factTwo,
   factThree,
+  tags,
 }) => {
   const typoVariant = quoteList ? 'list' : 'header2';
-  const router = usePathname();
+  // const router = usePathname();
   const href = '/book' + nextPage;
 
   return (
     <Wrapper tag="article">
       <Stack gap="2rem">
-        {router === '/book/' ? (
+        {/* {router === '/book/' ? (
           <Link href={headerLink}>
             <Typo tag="h1" variant="header1">
               {header}
             </Typo>
           </Link>
         ) : (
-          <Typo tag="h1" variant="header1">
-            {header}
-          </Typo>
-        )}
+*/}
+        <Typo tag="h1" variant="header1">
+          {header}
+        </Typo>
+        {/* )} */}
         {children}
         <Typo bold italic>
           {quoteList ? (
@@ -62,6 +65,7 @@ const BookPage: FunctionComponent<Props> = ({
         <Typo>
           <Link href={href}>Читать дальше…</Link>
         </Typo>
+        <TagGroup tags={tags} />
       </Stack>
     </Wrapper>
   );
