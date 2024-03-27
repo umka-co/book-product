@@ -3,7 +3,7 @@ import { BookPage, Typo } from '@/components';
 export const cat = 'Книга';
 export const tags = ['Зачем', 'Почему', 'Что'];
 export const title = 'Что же дальше?';
-export const link = "/what-is-next/"
+export const link = '/what-is-next/';
 
 export const content = (
   <BookPage
@@ -11,6 +11,7 @@ export const content = (
     headerLink={link}
     nextPage=""
     quote="В жизни любого продукта наступает «конец», будьте готовы создавать новые продукты, еще и еще."
+    tags={tags}
   >
     <Typo>
       Если вы не ошиблись в расчетах на стадии «идеи» и не врали себе при выборе «свой продукт» vs. «продажа чужого» — у

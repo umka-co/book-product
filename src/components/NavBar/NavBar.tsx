@@ -1,12 +1,10 @@
 import { FunctionComponent, useMemo } from 'react';
 import { useIsMobile } from '@/hooks';
 import TableOfContent from '../TableOfContent/TableOfContent';
-import styles from './NavBar.module.css';
 import SupportButtons from '../SupportButtons';
 import Stack from '../Stack';
 import Typo from '../Typo';
-
-
+import styles from './NavBar.module.css';
 
 const NavBar: FunctionComponent = () => {
   const isMobile = useIsMobile();

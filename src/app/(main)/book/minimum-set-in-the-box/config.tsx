@@ -3,7 +3,7 @@ import { BookPage, Typo } from '@/components';
 export const cat = 'Книга';
 export const tags = ['Зачем', 'Кто', 'Что'];
 export const title = 'Что такое «минимальный набор в коробке»?';
-export const link = "/minimum-set-in-the-box/"
+export const link = '/minimum-set-in-the-box/';
 
 export const content = (
   <BookPage
@@ -11,6 +11,7 @@ export const content = (
     headerLink={link}
     nextPage="/packaging-and-delivery-vs-content/"
     quote="Дайте клиенту все самое необходимое как можно быстрее. Свистелки-перделки™ будете добавлять потом, может и без них ваш продукт отлично продается."
+    tags={tags}
   >
     <Typo>Так все же, что упаковать «в коробку» и каким способом доставить продукт покупателю?</Typo>
     <Typo>

@@ -10,7 +10,7 @@ import BlockContactForm from './BlockContactForm';
 const ContactPage = () => {
   return (
     <Wrapper tag="article">
-      <BlockContactForm />
+      {/* <BlockContactForm /> */}
       <BlockSocialMedia />
     </Wrapper>
   );

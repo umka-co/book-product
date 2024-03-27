@@ -1,3 +1,4 @@
+export * from './convert';
 export * from './environment';
 export * from './localStorage';
 export * from './navigation';

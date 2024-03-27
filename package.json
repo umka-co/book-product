@@ -1,6 +1,6 @@
 {
   "name": "book-product",
-  "version": "0.3.7",
+  "version": "0.3.9",
   "description": "Book product in russian by Anton Karpenko",
   "private": false,
   "author": {
@@ -27,7 +27,6 @@
   "dependencies": {
     "@amplitude/analytics-browser": "latest",
     "@emailjs/browser": "latest",
-    "cyrillic-to-translit-js": "^3.2.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",

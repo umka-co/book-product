@@ -1,4 +1,4 @@
-import { content, link, title } from '@/components/[content]/doing-from-the-end';
+import { content, link, title } from './config';
 import { PUBLIC_URL } from '@/config';
 
 const DoingFromEndPage = () => content;

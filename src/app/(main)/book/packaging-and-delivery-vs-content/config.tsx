@@ -11,6 +11,7 @@ export const content = (
     headerLink={link}
     nextPage="/doing-from-the-end/"
     quote="Наличие расфасованного товара (упаковка) в локации потребления (доставка) важнее самого содержимого (продукта)."
+    tags={tags}
   >
     <Typo>
       Если в обертки Snickers®, Twix®, KitKat® и т.д. положить твердый кал, а в банки/бутылки Coke®, Pepsi®, Red

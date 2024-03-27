@@ -1,12 +1,22 @@
-import { APP_NAME, PUBLIC_URL } from '@/config';
-import { content, link, title } from '@/components/[content]/table-of-contents';
+import { Stack, TableOfContent, Wrapper } from '@/components';
+import SmartHeader from '@/components/SmartHeader';
+
+const title = 'Оглавление';
+const link = '/table-of-contents/';
 
 /**
  * Table of Content page
  * @page Table of Content
  */
 const TableOfContentPage = () => {
-  return content;
+  return (
+    <Wrapper tag="article">
+      <Stack gap="2rem">
+        <SmartHeader header={title} headerLink={link} />
+        <TableOfContent />
+      </Stack>
+    </Wrapper>
+  );
 };
 
 /**

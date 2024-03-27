@@ -1,7 +1,7 @@
-'use server';
-import { PathLike } from 'node:fs';
-import { readdir, lstat } from 'node:fs/promises';
 import { ReactNode } from 'react';
+import { lstat, readdir } from 'node:fs/promises';
+import { PathLike } from 'node:fs';
+import { IS_DEBUG } from '@/config';
 
 export type Page = {
   cats?: string[];
@@ -12,8 +12,11 @@ export type Page = {
 };
 
 const isDirectory = async (source: PathLike) => (await lstat(source)).isDirectory();
-// const isDirectory = (source: PathLike) => lstatSync(source).isDirectory();
 
+/**
+ * Returns a list of all "book pages" as array of slugs
+ * @returns {Promise<string[]>} - list of "xxx-yyy-zzz" name of directories
+ */
 export async function getAllPageSlugs(): Promise<string[]> {
   const directoryPath = 'src/app/(main)/book';
   const dirNames = [];
@@ -27,10 +30,21 @@ export async function getAllPageSlugs(): Promise<string[]> {
   } catch (error) {
     console.error('Unable to scan directory: ' + error);
   }
+  IS_DEBUG && console.log('getAllPageSlugs()', dirNames);
   return dirNames;
 }
 
-export async function getPageBySlug(slug: string): Promise<Page> {
-  const result = require(`@/app/(main)/book/${slug}/config.tsx`);
+/**
+ * Returns a page object by its slug
+ * @param {string} slug - the slug of the page
+ * @returns {Page} - the page object with content, title, tags, cats, etc.
+ */
+export function getPageBySlug(slug: string): Page {
+  let result: Page;
+  try {
+    result = require(`@/app/(main)/book/${slug}/config.tsx`);
+  } catch (error) {
+    result = { content: null };
+  }
   return result;
 }

@@ -1,4 +1,4 @@
-import { content, link, title } from '@/components/[content]/minimum-set-in-the-box';
+import { content, link, title } from './config';
 import { PUBLIC_URL } from '@/config';
 
 const MinimumSetPage = () => content;

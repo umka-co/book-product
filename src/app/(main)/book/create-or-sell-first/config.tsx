@@ -1,20 +1,18 @@
 import { BookPage, Typo } from '@/components';
 
 export const cat = 'Книга';
-export const tags = ['tag1', 'tag3', 'Зачем', 'Как'];
+export const tags = ['Зачем', 'Как'];
 export const title = 'Сначала создать или сначала продать?';
 export const link = '/create-or-sell-first/';
 
+const points = [
+  'Если можно продать без продукта, следует продавать.',
+  'Если без продукта вам не верят, надо создать его демонстрационные примеры.',
+  'Если продукт не до конца определен, предварительные продажи могут помочь сориентироваться в потребностях рынка.',
+];
+
 export const content = (
-  <BookPage
-    header={title}
-    headerLink={link}
-    quoteList
-    nextPage="/minimum-set-in-the-box/"
-    factOne="Если можно продать без продукта, следует продавать."
-    factTwo="Если без продукта вам не верят, надо создать его демонстрационные примеры."
-    factThree="Если продукт не до конца определен, предварительные продажи могут помочь сориентироваться в потребностях рынка."
-  >
+  <BookPage header={title} headerLink={link} nextPage="/minimum-set-in-the-box/" quoteList={points} tags={tags}>
     <Typo>
       С одной стороны продавать «воздух» занятие не из простых. C другой стороны имея вагон «первоклассного чистого
       снега» его очень сложно продать, особенно жителям заполярья.

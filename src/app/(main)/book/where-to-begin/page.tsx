@@ -1,4 +1,4 @@
-import { content, link, title } from '@/components/[content]/where-to-begin';
+import { content, link, title } from './config';
 import { PUBLIC_URL } from '@/config';
 
 const WhereToBeginPage = () => content;

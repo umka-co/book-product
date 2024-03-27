@@ -1,21 +1,18 @@
 import { BookPage, Typo } from '@/components';
 
 export const cat = 'Книга';
-export const tags = ['Tag1', 'tag2', 'время', 'деньги', 'кто', 'почему'];
+export const tags = ['время', 'деньги', 'кто', 'почему'];
 export const title = 'Что за формула «1->10->100» ?';
-export const link = '/book/business-as-1-10-100/';
+export const link = '/business-as-1-10-100/';
+
+const points = [
+  'Не носимся с идей как с «писаной торбой».',
+  'На изготовление/производство тратим не больше 10% средств и времени.',
+  'Все оставшееся время и силы тратим на продажи и привлечение клиентов.',
+];
 
 export const content = (
-  <BookPage
-    header={title}
-    headerLink={link}
-    nextPage="/goods-product-or-service/"
-    quoteList
-    factOne="Не носимся с идей как с «писаной торбой»."
-    factTwo="На изготовление/производство тратим не больше 10% средств и времени."
-    factThree="Все оставшееся время и силы тратим на продажи и привлечение клиентов."
-    tags={tags}
-  >
+  <BookPage header={title} headerLink={link} nextPage="/goods-product-or-service/" quoteList={points} tags={tags}>
     <Typo>Есть старая поговорка:</Typo>
     <Typo variant="list">
       <li>$1 тому кто придумал.</li>
