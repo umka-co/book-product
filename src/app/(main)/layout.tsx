@@ -9,9 +9,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileOrDesktop from '@/components/MobileOrDesktop';
 import StylesInjector from '@/components/StylesInjector';
+import { LayoutContent } from '@/components';
 import './main.css';
-import { LayoutContent} from '@/components';
-import { useIsMobile } from '@/hooks';
 
 export const metadata: Metadata = {
   metadataBase: new URL(PUBLIC_URL),
@@ -33,7 +32,6 @@ export const viewport: Viewport = {
  * @layout Main
  */
 const MainLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
-  
   return (
     <>
       <head>
@@ -44,7 +42,7 @@ const MainLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
 
       <body className={FONTS.default.className}>
         <Header />
-      <LayoutContent>{children}</LayoutContent>
+        <LayoutContent>{children}</LayoutContent>
         <Footer />
 
         <MobileOrDesktop />

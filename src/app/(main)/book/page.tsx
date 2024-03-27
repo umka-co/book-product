@@ -10,7 +10,6 @@ import PackagingDeliveryPage from './packaging-and-delivery-vs-content/page';
 import DoingFromEndPage from './doing-from-the-end/page';
 import WhatIsNextPage from './what-is-next/page';
 
-// const cat = 'История';
 const title = { APP_NAME };
 const link = '/book/';
 

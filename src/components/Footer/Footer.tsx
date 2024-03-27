@@ -26,7 +26,6 @@ const Footer = () => {
   return (
     <footer className={styles.footer} id="footer">
       <div className={className}>
-      
         <div className={styles.content}>
           <div className={styles.menu}>
             <Link href="/">Главная</Link>
@@ -36,7 +35,6 @@ const Footer = () => {
           <div className={styles.menu}>
             <Link href="/legal/privacy-policy/">Privacy Policy</Link>
             <Link href="/legal/terms-conditions/">Terms of Use</Link>
-            <Link href="/sitemap/">Site Map</Link>
           </div>
           {!isMobile ? (
             // Desktop version of the footer with copyright
@@ -45,7 +43,7 @@ const Footer = () => {
                 Copyright &copy; 2017-{new Date().getFullYear()} {copyrightHolder}
               </div>
             </div>
-          ):(
+          ) : (
             // Mobile version of the footer, no copyright
             <span className={styles.text}>
               {APP_NAME}
@@ -57,7 +55,6 @@ const Footer = () => {
         <div className={styles.social}>
           <SocialMedia variant="footer" />
         </div>
-      
       </div>
     </footer>
   );

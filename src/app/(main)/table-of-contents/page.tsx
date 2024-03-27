@@ -1,8 +1,8 @@
-import { Stack, TableOfContent, Typo, Wrapper } from '@/components';
-import { PUBLIC_URL } from '@/config';
+import { Stack, TableOfContent, Wrapper } from '@/components';
+import SmartHeader from '@/components/SmartHeader';
 
-const title = `Оглавление`;
-const link = `${PUBLIC_URL}/table-of-contents/`;
+const title = 'Оглавление';
+const link = '/table-of-contents/';
 
 /**
  * Table of Content page
@@ -12,9 +12,7 @@ const TableOfContentPage = () => {
   return (
     <Wrapper tag="article">
       <Stack gap="2rem">
-        <Typo tag="h1" variant="header1">
-          {title}
-        </Typo>
+        <SmartHeader header={title} headerLink={link} />
         <TableOfContent />
       </Stack>
     </Wrapper>

@@ -1,15 +1,14 @@
 import { Link, Stack, Typo, Wrapper } from '@/components';
+import SmartHeader from '@/components/SmartHeader';
 
-export const cat = 'История'
+export const cat = 'История';
 export const title = 'Как все начиналось?';
-export const link = '/how-everything-began/'
+export const link = '/how-everything-began/';
 
 export const content = (
   <Wrapper tag="article">
     <Stack gap="2rem">
-      <Typo tag="h1" variant="header1">
-      {title}
-      </Typo>
+      <SmartHeader header={title} headerLink={link} />
       <Typo tag="p" variant="paragraph">
         Во время очередного визита в город Прага у меня было много свободного времени. Я регулярно не мог заснуть раньше
         2х часов ночи, поэтому решил проводить время более полезно: записывать мысли.

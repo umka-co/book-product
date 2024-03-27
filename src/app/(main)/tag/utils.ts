@@ -1,4 +1,3 @@
-import { capitalizeAllWords, toCyrillic } from '@/utils';
 import { getAllPageSlugs, getPageBySlug } from '../book/utils';
 import { IS_DEBUG } from '@/config';
 

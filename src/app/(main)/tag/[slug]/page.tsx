@@ -1,8 +1,7 @@
 import { Metadata, NextPage } from 'next';
 import { APP_NAME, IS_DEBUG } from '@/config';
 import { capitalizeAllWords, toLatin } from '@/utils';
-import { Link, Typo, Wrapper } from '@/components';
-import { TagGroup } from '@/components/Taxonomy';
+import { Typo, Wrapper } from '@/components';
 import { getTagList } from '../utils';
 import { Page, getAllPageSlugs, getPageBySlug } from '../../book/utils';
 import { normalizeTag, tagToText } from '@/components/Taxonomy/utils';
@@ -35,17 +34,8 @@ const SingleTagPage: NextPage<Props> = async ({ params: { slug } }) => {
   return (
     <Wrapper tag="section">
       <Typo variant="header1">Tag: &quot;{title}&quot;</Typo>
-      {pagesWithTag.map(({ content, slug = '', tags = [], title }) => (
-        <article key={title}>
-          {title && (
-            <Typo variant="header2">
-              <Link href={`/book/${slug}`}>{title}</Link>
-            </Typo>
-          )}
-          {content}
-          {/* {cats?.length > 0 && <CategoryGroup cats={cats} />} */}
-          {tags?.length > 0 && <TagGroup tags={tags} />}
-        </article>
+      {pagesWithTag.map(({ content, title }) => (
+        <article key={title}>{content}</article>
       ))}
     </Wrapper>
   );
@@ -67,7 +57,6 @@ export async function generateStaticParams() {
  * Generates MetaData for the page based on the route params.
  */
 export async function generateMetadata({ params: { slug } }: Props): Promise<Metadata> {
-  // const normalizedTag = getTagBySlug(slug).name;
   const normalizedTag = capitalizeAllWords(slug);
   const title = `${normalizedTag} - Tag - ${APP_NAME}`;
   return { title };
