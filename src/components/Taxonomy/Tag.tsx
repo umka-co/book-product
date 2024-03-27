@@ -1,7 +1,7 @@
 import { FunctionComponent, HTMLAttributes } from 'react';
 import { capitalize, toLatin } from '@/utils';
-import { tagToUrl } from '@/app/(main)/tag/utils';
 import Button from '../Button';
+import { tagToUrl } from './utils';
 
 interface Props extends HTMLAttributes<HTMLAnchorElement> {
   tag?: string;

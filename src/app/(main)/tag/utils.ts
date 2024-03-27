@@ -2,23 +2,6 @@ import { capitalizeAllWords, toCyrillic } from '@/utils';
 import { getAllPageSlugs, getPageBySlug } from '../book/utils';
 import { IS_DEBUG } from '@/config';
 
-export function normalizeTag(tag: string): string {
-  return tag.toLocaleLowerCase().replace(/ /g, '-');
-}
-
-export function tagToText(tag: string): string {
-  return capitalizeAllWords(toCyrillic(tag.replace(/-/g, ' ')));
-}
-
-/**
- * Generates url for given Tag
- * @param {string} tag Tag name
- * @returns {string} Relative URL
- */
-export function tagToUrl(tag: string): string {
-  return `/tag/${normalizeTag(tag)}/`;
-}
-
 /**
  * Returns list of unique Tags from all content files
  * All tags converted to lowercase

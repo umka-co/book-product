@@ -4,6 +4,9 @@ import { Page, getPageBySlug } from '@/app/(main)/book/utils';
 import { usePathname } from 'next/navigation';
 import TagGroup from './TagGroup';
 
+/**
+ * @deprecated Please remove
+ */
 const TagsForCurrentPage = () => {
   const pathname = usePathname();
   const [tags, setTags] = useState<string[]>([]);
